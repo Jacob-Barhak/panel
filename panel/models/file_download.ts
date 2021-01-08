@@ -174,9 +174,11 @@ export class FileDownloadView extends InputWidgetView {
       this.anchor_el.classList.add(buttons[`btn_${this.model.button_type}` as const])
     } else {  // When the button type is changed.
       const prev_button_type = this.anchor_el.classList.item(1)
-      if ( prev_button_type ) {
-        this.anchor_el.classList.replace(prev_button_type, buttons[`btn_${this.model.button_type}` as const])
-      }
+      const btn_type = buttons[`btn_${this.model.button_type}` as const]
+      if (prev_button_type)
+        this.anchor_el.classList.replace(prev_button_type, btn_type)
+      else
+	this.anchor_el.classList.add(btn_type)
     }
   }
 
