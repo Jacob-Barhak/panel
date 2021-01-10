@@ -23,5 +23,5 @@
   "files": [
     "dist/**/*.{js,js.map,d.ts,json,css}"
   ],
-  "main": "dist/panel.min.js"
+  "main": "dist/panel.js"
 }
